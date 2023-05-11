@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RadioTest {
-Radio radio = new Radio();
+    Radio radio = new Radio();
 
     @Test
     public void shouldChangeStation() {
@@ -153,4 +153,5 @@ Radio radio = new Radio();
         int expected = 0;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
-    }  }
+    }
+}

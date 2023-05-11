@@ -2,16 +2,17 @@ package org.example;
 
 public class Radio {
     private int currentStation;
-    private int minStation = 0;
-    private int maxStation = 9;
+    private final int minStation = 0;
+    private final int maxStation = 9;
     private int currentVolume;
-    private int minVolume = 0;
-    private int maxVolume = 100;
+    private final int minVolume = 0;
+    private final int maxVolume = 100;
 
     public int getCurrentStation() {
         return currentStation;
     }
-    public void setCurrentStation (int currentStation) {
+
+    public void setCurrentStation(int currentStation) {
         if (currentStation < minStation) {
             return;
         }
@@ -42,21 +43,22 @@ public class Radio {
         return currentVolume;
     }
 
-    public void setCurrentVolume (int currentVolume) {
+    public void setCurrentVolume(int currentVolume) {
         if (currentVolume < minVolume) {
             return;
         }
         if (currentVolume > maxVolume) {
             return;
-    }
-          this.currentVolume = currentVolume;
         }
+        this.currentVolume = currentVolume;
+    }
 
     public void increaseVolume() {
         if (currentVolume < maxVolume) {
             currentVolume++;
         }
     }
+
     public void decreaseVolume() {
         if (currentVolume > minVolume) {
             currentVolume--;
